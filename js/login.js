@@ -1,19 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded' , () => {
     const form = document.getElementById('loginBox');
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
         const datos = {
-            name: name,
             email: email,
             password: password
-        };
+        }
 
-        let url = 'http://localhost:4000/users/add';
+        let url = 'http://localhost:4000/users/login';
         fetch(url, {
             method: 'POST',
             body: JSON.stringify(datos),
@@ -22,23 +20,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
         .then(response => {
-            if (response.ok) {
+            if(response.ok){
                 const mensaje = document.getElementById('mensajeCheck');
                 mensaje.style.display = 'block';
-                mensaje.textContent = 'Usuario Creado Correctamente';
-                return window.location.href = 'login.html';
-            } else {
+                mensaje.textContent = 'Identificacion exitosa.';
+                return response.json();
+            }else{
                 const mensaje = document.getElementById('mensajeCheck');
                 mensaje.style.display = 'block';
-                mensaje.textContent = 'Ocurrio un error';
-                throw new Error('La solicitud no fue exitosa');
+                mensaje.textContent = 'Usuario incorrecto, intente nuevamente.';
             }
         })
         .then(data => {
             console.log(data);
+            const userID = data.loginUser.id;
+            console.log(userID);
+            window.location.href = `index.html?id=${userID}`;
         })
-        .catch(error => {
-            console.error(error);
-        });
-    });
-});
+        .catch(error => console.log(error))
+    })
+})
