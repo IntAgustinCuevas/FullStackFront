@@ -8,15 +8,79 @@
     <script src="js/index.js"></script>
 </head>
 <body>
-<div class="container">
-    <header>
-        <h3 id="checkPersonajes">Mis personajes</h3>
-        <h3 id="usuario" align-items="left"></h3>
+<div class="container" id="container">
+    <header id="containerHeader">
+        <h3 id="misPersonajes" href="characters.html">Mis personajes</h3>
+        <h3 id="usuario"></h3>
     </header>
-    <div class="contenido">
+    
+    <div class="elegirPersonaje" id="elegirPersonaje">
+        <header>
         <h2>Eleccion de Personaje</h2>
+        </header>
+        
         <div class="personajes" id="personajes">
+            <img src="img/personaje1.jpeg" alt="personaje1" id="personaje1">
+            <img src="img/personaje2.jpeg" alt="personaje2" id="personaje2">
+            <img src="img/personaje3.jpeg" alt="personaje3" id="personaje3">
+            <img src="img/personaje4.jpeg" alt="personaje4" id="personaje4">
+            <img src="img/personaje5.jpeg" alt="personaje5" id="personaje5">
+        </div>
+    </div>
 
+    <div class="elegirParteSuperior" id="elegirParteSuperior">
+        <header>
+            <h2>Eleccion Parte Superior</h2>
+        </header>
+
+        <div class="parteSuperior" id="parteSuperior">
+            <img src="img/parteSuperiorBuzo.png" alt="parteSuperiorBuzo" id="parteSuperiorBuzo">
+            <img src="img/parteSuperiorRemera.png" alt="parteSuperiorRemera" id="parteSuperiorRemera">
+            <img src="img/parteSuperiorCamisa.png" alt="parteSuperiorCamisa" id="parteSuperiorCamisa">
+        </div>
+    </div>
+
+    <div class="elegirPantalon" id="elegirPantalon">
+        <header>
+            <h2>Eleccion Pantalon</h2>
+        </header>
+
+        <div class="pantalon" id="pantalon">
+            <img src="img/pantalonJean.png" alt="pantalonJean" id="pantalonJean">
+            <img src="img/pantalonBermuda.png" alt="pantalonBermuda" id="pantalonBermuda">
+            <img src="img/pantalonJoggin.png" alt="pantalonJoggin" id="pantalonJoggin">           
+        </div>
+
+    </div>
+
+    
+    <div class="elegirCalzado" id="elegirCalzado">
+        <header>
+            <h2>Eleccion Calzado</h2>
+        </header>
+        
+        <div class="calzado" id="calzado">
+            <img src="img/calzadoZapatillas.png" alt="calzadoZapatillas" id="calzadoZapatillas">
+            <img src="img/calzadoBotas.png" alt="calzadoBotas" id="calzadoBotas">
+            <img src="img/calzadoZapatos.png" alt="calzadoZapatos" id="calzadoZapatos">
+        </div>
+    </div>
+    
+    <div class="vestimentaCompleta" id="vestimentaCompleta">
+        <header>
+            <h2>Vestimenta completa</h2>
+        </header>
+        
+        <div class="vestimenta" id="vestimenta">
+            <img src="img/defaultCara.png" alt="defaultCara" id="defaultCara">
+            <img src="img/defaultDorso.png" alt="defaultDorso" id="defaultDorso">
+            <img src="img/defaultPiernas.png" alt="defaultPiernas" id="defaultPiernas">
+            <img src="img/defaultPies.png" alt="defaultPies" id="defaultPies">
+
+            <label for="nombreVestimenta">Nombre del outfit:</label>
+            <input type="text" id="nombreVestimenta" placeholder="Ingresar nombre">
+            <button id="enviarVestimenta">Guardar</button>
+            <a id="check" style="display: none">Personaje creado correctamente!</a>
         </div>
     </div>
 </div>
