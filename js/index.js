@@ -49,7 +49,8 @@ document.addEventListener('DOMContentLoaded' , () => {
     })
 
     const boton = document.getElementById('enviarVestimenta');
-    boton.addEventListener('click' , () => {
+    boton.addEventListener('click' , (e) => {
+        e.preventDefault();
         const inputName = document.getElementById('nombreVestimenta').value;
         let datos = {
             userId: userLogin,

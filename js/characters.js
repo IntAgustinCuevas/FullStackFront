@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded' , () => {
+
+    
     const parametro = new URLSearchParams(window.location.search);
     const userLogin = parametro.get('id');
+    
+    const botonVolver = document.getElementById('volver');
+        botonVolver.addEventListener('click' , () => {
+            window.location.href = `index.html?id=${userLogin}`;
+        })
 
     const nombre1 = document.getElementById('namePersonaje1')
     const rostro1 = document.getElementById('rostro1');
@@ -37,36 +44,68 @@ document.addEventListener('DOMContentLoaded' , () => {
     fetch(url)
     .then(response => response.json())
     .then(data => {
-        nombre1.textContent = data[0].name;
-        rostro1.src = data[0].personaje;
-        cuerpo1.src = data[0].parteSuperior;
-        piernas1.src = data[0].pantalon;
-        pies1.src = data[0].calzado;
+        if(!data[0]){
+            console.log(nada);
+        }else{
+            nombre1.textContent = data[0].name;
+            rostro1.src = data[0].personaje;
+            cuerpo1.src = data[0].parteSuperior;
+            piernas1.src = data[0].pantalon;
+            pies1.src = data[0].calzado;
 
-        nombre2.textContent = data[1].name;
-        rostro2.src = data[1].personaje;
-        cuerpo2.src = data[1].parteSuperior;
-        piernas2.src = data[1].pantalon;
-        pies2.src = data[1].calzado;
+            nombre2.textContent = data[1].name;
+            rostro2.src = data[1].personaje;
+            cuerpo2.src = data[1].parteSuperior;
+            piernas2.src = data[1].pantalon;
+            pies2.src = data[1].calzado;
 
-        nombre3.textContent = data[2].name;
-        rostro3.src = data[2].personaje;
-        cuerpo3.src = data[2].parteSuperior;
-        piernas3.src = data[2].pantalon;
-        pies3.src = data[2].calzado;
+            nombre3.textContent = data[2].name;
+            rostro3.src = data[2].personaje;
+            cuerpo3.src = data[2].parteSuperior;
+            piernas3.src = data[2].pantalon;
+            pies3.src = data[2].calzado;
 
-        nombre4.textContent = data[3].name;
-        rostro4.src = data[3].personaje;
-        cuerpo4.src = data[3].parteSuperior;
-        piernas4.src = data[3].pantalon;
-        pies4.src = data[3].calzado;
+            nombre4.textContent = data[3].name;
+            rostro4.src = data[3].personaje;
+            cuerpo4.src = data[3].parteSuperior;
+            piernas4.src = data[3].pantalon;
+            pies4.src = data[3].calzado;
 
-        nombre5.textContent = data[4].name;
-        rostro5.src = data[4].personaje;
-        cuerpo5.src = data[4].parteSuperior;
-        piernas5.src = data[4].pantalon;
-        pies5.src = data[4].calzado;
+            nombre5.textContent = data[4].name;
+            rostro5.src = data[4].personaje;
+            cuerpo5.src = data[4].parteSuperior;
+            piernas5.src = data[4].pantalon;
+            pies5.src = data[4].calzado;
+        }
+        
     })
     .catch(error => console.log(error))
+
+    const nombre = document.getElementById('namePersonaje');
+    const rostro = document.getElementById('rostro');
+    const cuerpo = document.getElementById('cuerpo');
+    const piernas = document.getElementById('piernas');
+    const pies = document.getElementById('pies');
+
+    const boton = document.getElementById('buscarName');
+    boton.addEventListener('click' , (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('buscar').value;
+        
+        let url = `http://localhost:4000/character/${name}`;
+        fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            nombre.textContent = data[0].name;
+            rostro.src = data[0].personaje;
+            cuerpo.src = data[0].parteSuperior;
+            piernas.src = data[0].pantalon;
+            pies.src = data[0].calzado;
+        })
+        .catch(error => console.error(error));
+
+    })
 })
 

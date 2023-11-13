@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signup</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'> 
+    <link rel='stylesheet' type='text/css' media='screen' href='css/loginSignup.css'> 
     <script src="js/signup.js"></script>
 </head>    
-<body class="loginBox">
-    <form class="loginBox" id="loginBox">
-        <label for="name"> Nombre: </label>
-        <input type="text" id="name" name="name" required>
+<body>
+    <div class="container">
 
-        <label for = 'email'> Email: </label>
-        <input type="text" id="email" name="email" required>
+        <form class="loginBox" id="loginBox">
+            <label for="name"> Nombre: </label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for = 'email'> Email: </label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="password"> Contraseña: </label>
+            <input type="password" id="password" name="password" required>
+    
+            <label for="submit"></label>
+            <input type="submit" id="submit" value="Registrarse">
+    
+            <p id="mensajeCheck" style="display: none" style="color:aliceblue">Error</p>
+            
+        </form>
 
-        <label for="password"> Contraseña: </label>
-        <input type="password" id="password" name="password" required>
-
-        <label for="submit"></label>
-        <input type="submit" id="submit" value="Registrarse">
-
-        <p id="mensajeCheck" style="display: none">Error</p>
-        
-    </form>
+    </div>
 </body>
 </html>
