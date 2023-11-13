@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+@keyframes rebote{
+    0%, 100%{
+        transform:translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+body{
+    margin:0;
+    height:100%;
+    width:100%;
+}
+
+#container{
+    height:100%;
+    width:100%;
+    background-image:url('../img/fondoLogin.jpeg');
+}
+
+.container h3{
+    color:antiquewhite; 
+    padding: 10px;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+}
+
+#chooseYourOutfit{
+    color:aliceblue;
+    animation: rebote 2s infinite;
+    span:nth-child(1){
+        color:red;
+    }
+    span:nth-child(2){
+       color:blue; 
+    }
+    span:nth-child(3){
+        color:yellowgreen;
+    }
+}
+
+#misPersonajes:hover{
+    transform:scale(1.1);
+    cursor:pointer;
+}
+
+#containerHeader{
+    background-color:hsla(0,0%,0%,0.90);
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+    height: 45px;
+}
+
+
+#elegirPersonaje{
+    display:flex;
+    flex-direction:column; 
+    height: 152px;
+    width: 1050px;
+}
+
+.elegirPersonaje header{
+    display:flex;      
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    height: 45px;
+}
+
+.elegirPersonaje h2{
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+}
+
+#personajes{
+    flex:1;
+    display:flex;
+    justify-content: space-evenly;
+    align-items:center;
+}
+
+.personajes img{
+    width: 130px;
+    height: 100px;
+}
+.personajes img:hover{
+    transform:scale(1.1);
+    cursor:pointer;
+}
+
+#elegirParteSuperior{
+    display:flex;
+    flex-direction:column;
+    height: 152px;
+    width: 1050px;
+}
+
+.elegirParteSuperior header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height: 45px;
+    width:100%;
+
+}
+
+.elegirParteSuperior h2{
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+}
+
+#parteSuperior{
+    flex:1;
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.parteSuperior img{
+    width: 100px;
+    height: 115px;
+}
+.parteSuperior img:hover{
+    transform:scale(1.1);
+    cursor:pointer;
+}
+
+#elegirPantalon{
+    display:flex;
+    flex-direction:column;
+    height: 152px;
+    width: 1050px;
+}
+
+.elegirPantalon header{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height: 45px;
+    width:100%;
+}
+
+.elegirPantalon h2{
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+}
+
+#pantalon{
+    flex:1;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+
+.pantalon img{
+    width: 100px;
+    height: 100px;
+}
+.pantalon img:hover{
+    transform:scale(1.1);
+    cursor:pointer;
+}
+
+#elegirCalzado{
+    display:flex;
+    flex-direction: column;
+    height: 154px;
+    width: 1050px;
+}
+
+.elegirCalzado header{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height: 45px;
+    width:100%;
+}
+
+.elegirCalzado h2{
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+}
+
+#calzado{
+    flex:1;
+    display:flex;
+    justify-content: space-evenly;
+    align-items:center;
+}
+
+.calzado img{
+    height: 100px;
+    width: 100px;
+}
+.calzado img:hover{
+    transform:scale(1.1);
+    cursor:pointer;
+}
+
+#vestimentaCompleta{
+    display:flex;
+    flex-direction: column;
+    position:absolute;
+    top: 45px;
+    right: 0px;
+    background-color:hsla(0, 0%, 75%, 0.50);
+    height: 600px;
+    width: 300px;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.vestimentaCompleta header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width:100%;
+}
+
+.vestimentaCompleta h2{
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+}
+
+#vestimenta{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center;
+}
+
+.vestimenta img{
+    height: 100px;
+    width: 100px;
+}
+
+.vestimenta label{
+    color:black;
+    font-family: "Helvetica Neue",Helvetica,Arial;
+}
+
+.vestimenta input{
+    height: 15px;
+    width: 120px;
+}
